@@ -14,6 +14,8 @@ namespace SignalR_Chat.Data
         {
         }
 
+        
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -22,5 +24,7 @@ namespace SignalR_Chat.Data
                 .WithMany(d => d.Messages)
                 .HasForeignKey(d => d.UserID);
         }
+
+        public DbSet<MessageModel> Messages { get; set; }
     }
 }

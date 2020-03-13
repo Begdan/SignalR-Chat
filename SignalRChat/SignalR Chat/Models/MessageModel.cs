@@ -19,5 +19,10 @@ namespace SignalR_Chat.Models
         public string UserID { get; set; }
 
         public virtual AppUserModel Sender { get; set; }
+
+        public MessageModel()
+        {
+            TimeSent = DateTime.Now;
+        }
     }
 }
